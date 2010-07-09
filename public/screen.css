@@ -1,0 +1,59 @@
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #f0f0f0;
+}
+h1 {
+  font-family: "Lucida Grande", sans-serif;
+}
+input[type=text] {
+  font-size: 22px;
+  vertical-align: middle;
+}
+fieldset {
+  display: block;
+  width: 165px;
+  float: left;
+  border: none;
+}
+legend {
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+#result {
+  text-align: center;
+  font-size: 40px;
+  margin: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
+  border: 1px #c0c0c0 solid;
+  border-radius: 10px;
+}
+#wrapper {
+  width: 600px;
+  margin: 10px auto 20px auto;
+  background-color: #fff;
+  padding: 5px 40px 40px 40px;
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+}
+#footer {
+  width: 600px;
+  margin: 10px auto 0 auto;
+  text-align: right;
+  font-size: 11px;
+}

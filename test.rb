@@ -15,14 +15,7 @@ class HelloWorldTest < Test::Unit::TestCase
   end
 
   def test_ipa
-    get "/ipa/hola"
+    get "/ipa?words=hola"
     assert_equal 200, last_response.status
   end
-
-  def test_api_ipa
-    get "/api/ipa/hola"
-    assert_equal 200, last_response.status
-  end
-
-
 end

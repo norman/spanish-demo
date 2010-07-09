@@ -1,0 +1,38 @@
+-# coding: utf-8
+%h1 Spanish Phonology Library Demo
+%p
+  This library proceses Spanish orthography into <a
+  href="http://github.com/norman/phonology/blob/master/lib/phonology/features.rb">bundles
+  of phonological features</a> represented in <a
+  href="http://en.wikipedia.org/wiki/International_Phonetic_Alphabet">IPA</a>
+  and uses the <a
+  href="http://en.wikipedia.org/wiki/Sonority_Sequencing_Principle">Sonority
+  Sequencing Principle</a> to perform syllabification. This theoretically
+  allows it to represent Spanish text in any dialect, and accurately syllabify
+  without the use of regular expressions.
+%p
+  Enter a Spanish word to see it represented as syllables in IPA.  You can also
+  select phonological rules for various Spanish dialects.
+- if @ipa
+  #result= "#{@words}: #{@ipa}"
+%form{:action => "/ipa", :method => "get", :"accept-charset" => "UTF-8"}
+  .options.clearfix
+    %h3 Dialect Options
+    %fieldset
+      %legend "Casar" and "cazar"
+      = checkbox("Seseo", :name => "rules[seseo]", :value => 1, :id => "seseo") {@rules.include? :seseo}
+      = checkbox("Distinción", :name => "rules[seseo]", :value => "", :id => "distincion") {!@rules.include? :seseo}
+    %fieldset
+      %legend "Calló" and "cayó"
+      = checkbox("Yeísmo", :name => "rules[yeismo]", :value => 1, :id => "yeismo") {@rules.include? :yeismo}
+      = checkbox("Zheísmo", :name => "rules[zheismo]", :value => 1, :id => "zheismo") {@rules.include? :zheismo}
+      = checkbox("Sheísmo", :name => "rules[sheismo]", :value => 1, :id => "sheismo") {@rules.include? :sheismo}
+    %fieldset
+      %legend Syllable-final "s"
+      = checkbox("Voicing", :name => "rules[voicing]", :value => 1, :id => "voicing") {@rules.include? :voicing}
+      = checkbox("Aspiration", :name => "rules[aspiration]", :value => 1, :id => "aspiration") {@rules.include? :aspiration}
+  .phrase
+    %h3 Word or phrase
+    %input#words{:type => "text", :size => "35", :value => @words, :name => "words"}
+    %input#submit{:type => "submit", :value => "See IPA"}
+    %button#random Random Word

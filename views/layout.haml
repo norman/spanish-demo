@@ -1,0 +1,15 @@
+-# coding: utf-8
+!!! 5
+%html
+  %head
+    %title= @title ||= "Spanish Phonology Library Demo"
+    %script{:type => "text/javascript", :src => "/jquery.js"}
+    %script{:type => "text/javascript", :src => "/app.js"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/screen.css"}
+  %body
+    #wrapper
+      = yield
+    #footer
+      <a href="http://github.com/norman/spanish-demo">Source code (this site)</a>
+      <a href="http://github.com/norman/spanish">Source code (Spanish lib)</a>
+
