@@ -177,7 +177,7 @@ jQuery(function() {
   });
   $('fieldset input[type=checkbox]').click(function(event) {
     if (this.checked) {
-      var children = this.parentElement.children;
+      var children = this.parentNode.children;
       for (var i = 0; i < children.length; i++) {
         if(children[i] != this && children[i].checked) {
           children[i].checked = false;
