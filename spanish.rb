@@ -17,6 +17,12 @@ before do
   end
 end
 
+set :haml, {
+  :encoding => "utf-8",
+  :format   => :html5,
+  :ugly     => true,
+}
+
 helpers do
   def checkbox(label, options, &block)
     capture_haml do
