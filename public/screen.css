@@ -35,6 +35,10 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%;
 }
+#words {
+  width: 410px;
+  margin-right: 10px;
+}
 #result {
   text-align: center;
   font-size: 40px;
@@ -42,6 +46,7 @@ html[xmlns] .clearfix {
   padding: 10px 0 10px 0;
   border: 1px #c0c0c0 solid;
   border-radius: 10px;
+  -moz-border-radius: 10px;
 }
 #wrapper {
   width: 600px;
@@ -50,6 +55,7 @@ html[xmlns] .clearfix {
   padding: 5px 40px 40px 40px;
   border: 1px solid #c0c0c0;
   border-radius: 10px;
+  -moz-border-radius: 10px;
 }
 #footer {
   width: 600px;
