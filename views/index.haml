@@ -21,7 +21,6 @@
     %fieldset
       %legend "Casar" and "cazar"
       = checkbox("Seseo", :name => "rules[seseo]", :value => 1, :id => "seseo") {@rules.include? :seseo}
-      = checkbox("Distinción", :name => "rules[seseo]", :value => "", :id => "distincion") {!@rules.include? :seseo}
     %fieldset
       %legend "Calló" and "cayó"
       = checkbox("Yeísmo", :name => "rules[yeismo]", :value => 1, :id => "yeismo") {@rules.include? :yeismo}
